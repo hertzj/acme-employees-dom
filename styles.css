@@ -13,6 +13,16 @@
     text-align: center;
 }
 
+.favorite {
+    background-color: beige;
+    border: solid 2px teal;
+    margin: 5px;
+    padding: 30px;
+    width: 40px;
+    height: 20px;
+    text-align: center;
+}
+
 @media (max-width: 600px) {
     .container {
     display: flex;
@@ -23,3 +33,4 @@
         width: 80vw;
     }
 }
+
