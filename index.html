@@ -19,7 +19,7 @@
             <p>
                 Favorite: <div></div>
             </p>
-            
+
         </div>
     </body>
     <script>
@@ -38,14 +38,29 @@
         const emp = [...employee]; // turning the HTML collection into an array
         const favorites = []
 
+
         emp.forEach((element) => {
+
             element.addEventListener('click', () => {
-            element.style['background-color'] = 'beige'
-            let name = element.textContent;
-            for (let i = 0; i < employees.length; i++) {
-                let obj = employees[i];
-                if (obj.name === name) {
-                    favorites.push(obj.id)
+            // const colorChange = element.style['background-color'] = 'beige'
+            if (element.className.indexOf('favorite') > -1) {
+                    element.classList.remove('favorite')
+                    favorites.pop()
+            }
+            else {
+                if (favorites.length >= 3) {
+                    alert('There is a max of 3 favorites, sorry')
+                }
+                else {
+                    element.classList.add('favorite')
+                let name = element.textContent;
+
+                for (let i = 0; i < employees.length; i++) {
+                    let obj = employees[i];
+                    if (obj.name === name) {
+                        favorites.push(obj.id)
+                    }
+                }
                 }
             }
             })
