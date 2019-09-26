@@ -35,23 +35,10 @@
         ];
 
         const employee = document.getElementsByClassName('employee')
-
+        const emp = [...employee]; // turning the HTML collection into an array
         const favorites = []
 
-        // Array.from('employee').forEach((element) => {
-        //     element.addEventListener('click', () => {
-        //     element.style['background-color'] = 'beige'
-        //     let name = element.textContent;
-        //     for (let i = 0; i < employees.length; i++) {
-        //         let obj = employees[i];
-        //         if (obj.name === name) {
-        //             favorites.push(obj.id)
-        //         }
-        //     }
-        //     })
-        // })
-
-        employee.forEach((element) => {
+        emp.forEach((element) => {
             element.addEventListener('click', () => {
             element.style['background-color'] = 'beige'
             let name = element.textContent;
