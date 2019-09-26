@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.employee {
+    background-color: aqua;
+    border: solid 2px teal;
+    margin: 5px;
+    padding: 30px;
+    width: 40px;
+    height: 20px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    }
+    .employee {
+        width: 80vw;
+    }
+}

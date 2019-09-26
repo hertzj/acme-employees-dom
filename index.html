@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>Acme Employees DOM</h1>
+        <h5>Choose your three favorite employees.</h5>
+        <div class='container'>
+            <div class='employee'>moe</div>
+            <div class='employee'>larry</div>
+            <div class='employee'>shep</div>
+            <div class='employee'>curly</div>
+            <div class='employee'>groucho</div>
+            <div class='employee'>harpo</div>
+            <div class='employee'>shep Jr.</div>
+            <div class='employee'>lucy</div>
+        </div>
+        <div class='favorite'>
+            <p>
+                Favorite: <div></div>
+            </p>
+            
+        </div>
+    </body>
+    <script>
+        const employees = [
+        { id: 1, name: 'moe'},
+        { id: 2, name: 'larry'},
+        { id: 4, name: 'shep'},
+        { id: 3, name: 'curly'},
+        { id: 5, name: 'groucho'},
+        { id: 6, name: 'harpo'},
+        { id: 8, name: 'shep Jr.'},
+        { id: 99, name: 'lucy'}
+        ];
+
+        const employee = document.getElementsByClassName('employee')
+
+        const favorites = []
+
+        // Array.from('employee').forEach((element) => {
+        //     element.addEventListener('click', () => {
+        //     element.style['background-color'] = 'beige'
+        //     let name = element.textContent;
+        //     for (let i = 0; i < employees.length; i++) {
+        //         let obj = employees[i];
+        //         if (obj.name === name) {
+        //             favorites.push(obj.id)
+        //         }
+        //     }
+        //     })
+        // })
+
+        employee.forEach((element) => {
+            element.addEventListener('click', () => {
+            element.style['background-color'] = 'beige'
+            let name = element.textContent;
+            for (let i = 0; i < employees.length; i++) {
+                let obj = employees[i];
+                if (obj.name === name) {
+                    favorites.push(obj.id)
+                }
+            }
+            })
+        })
+
+        // employee[0].addEventListener('click', () => {
+        //     employee[0].style['background-color'] = 'beige'
+        //     let name = employee[0].textContent;
+        //     for (let i = 0; i < employees.length; i++) {
+        //         let obj = employees[i];
+        //         if (obj.name === name) {
+        //             favorites.push(obj.id)
+        //         }
+        //     }
+        // })
+
+    </script>
+</html>
